@@ -1,32 +1,37 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import '../styles/tailwind.css';
-import 'animate.css';
-const { title } = Astro.props;
+import "../styles/tailwind.css";
+import "animate.css";
+const { title, description, ogdescription } = Astro.props;
 ---
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{Astro.props.title}</title>
-		<!-- meta description mm. ind her... -->
-	</head>
-	<body>
 
-		<header>
-			<Header></Header>
-		</header>
-		
-		<main>
-			<slot />
-		</main>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+	<meta name="description" content="Fire trin til en fantastisk plakatvæg: Dyk ned i harmoniske farver,  størrelser og formater samt spændende layout. Få tips til at skabe ro og dynamik!" />
+    <title>{Astro.props.title}</title>
+    <meta name="description" content={Astro.props.descripton} />
+    <meta property="og:locale" content="da_DK" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={Astro.props.ogtitle} />
+    <meta property="og:description" content={Astro.props.ogdescription} />
+  </head>
+  
+  <body>
+    <header>
+      <Header />
+    </header>
 
-		<footer>
-			<Footer></Footer>
-		</footer>
-			
-	</body>
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <Footer />
+    </footer>
+  </body>
 </html>
