@@ -8,6 +8,7 @@ import layout1 from "../assets/images/04-layout1.png";
 import layout2 from "../assets/images/04-layout2.png";
 import layout3 from "../assets/images/04-layout3.png";
 import layout4 from "../assets/images/04-layout4.png";
+import converselogo from "../assets/images/converse.svg";
 import oldschoolconverse from "../assets/images/1908_converse.png"
 import jamesdean from "../assets/images/james_dean.jpg";
 import elvis from "../assets/images/elvis.jpg";
@@ -18,10 +19,12 @@ import commes from "../assets/images/commes.jpg";
 import weloveconverse from "../assets/images/we<3converse.jpg";
 ---
 
-<body class="bg-blue-100 font-serif p-7">
+<body class="bg-white p-7">
 <MainLayout title="Converse All Star">
-  <article class="grid mx-auto container gap-8 prose">
-    <h1>Historien om Converse All Star</h1>
+  <article class="grid mx-auto container prose">
+    <h1 class="text-center">Historien om Converse All Star</h1>
+    <Image src={converselogo} class="w-60 mx-auto" alt="Converse All Star"/>
+
 
     <h2>Kapitel 1: <br> Ikke blot en sko, men et ikons fødsel</h2>
 
@@ -49,10 +52,10 @@ import weloveconverse from "../assets/images/we<3converse.jpg";
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <div>
-        <p>Men det var inden for musikkens verden, at Converse All Star virkelig solidificerede sin ikoniske status. Rockstjerner som The Ramones og The Clash gjorde skoene til en del af deres signaturstil og cementerede dem som et symbol på oprør og ungdommelig ånd.</p>
+        <Image src={ramones} alt="Ramones gjorde Converse rock'n'roll!" />
       </div>
       <div>
-        <Image src={ramones} alt="Ramones gjorde Converse rock'n'roll!" />
+        <p>Men det var inden for musikkens verden, at Converse All Star virkelig solidificerede sin ikoniske status. Rockstjerner som The Ramones og The Clash gjorde skoene til en del af deres signaturstil og cementerede dem som et symbol på oprør og ungdommelig ånd.</p>
       </div>
     </div>
 
@@ -65,12 +68,12 @@ import weloveconverse from "../assets/images/we<3converse.jpg";
 
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
       <div>
-        <Image src={scooby} alt="Scooby Doo Converse" />
+        <Image src={scooby} class="h-50" alt="Scooby Doo Converse" />
       </div>
       <div>
-        <Image src={warhol} alt="Kunsnerisk sko" />      </div>
+        <Image src={warhol} class="h-50 "alt="Kunsnerisk sko" />      </div>
       <div>
-        <Image src={commes} alt="Designer Converse" />      </div>
+        <Image src={commes} class="h-50" alt="Designer Converse" />      </div>
     </div>
     
 
@@ -88,7 +91,7 @@ import weloveconverse from "../assets/images/we<3converse.jpg";
       I sin essens er Converse All Stars rejse langt fra ovre. Det er en saga om udvikling, modstandsdygtighed og kulturel betydning, der vil fortsætte med at forme fodtøjsindustrien og inspirere kommende generationer.
       </p>
 
-      <Image src={weloveconverse} alt="We love Converse" />      
+      <Image src={weloveconverse} class="w-full"alt="We love Converse" />      
     </div>
   </article>
 </MainLayout>
