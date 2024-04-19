@@ -1,15 +1,13 @@
 ---
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import "../styles/tailwind.css";
 import "animate.css";
 const { title, description, ogdescription } = Astro.props;
 ---
 
-<html lang="da">
-  <head>
+<html lang="en">
     <meta charset="utf-8" />
-    <link rel="icon" type="../assets/images/favicon.svg" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
 	<meta name="description" content="Udforsk historien om Converse All Star fra dens oprettelse i 1908 til dens status som et globalt ikon i dag. Opdag, hvordan skoene har formet mode, kultur og musik gennem årene"/>
@@ -22,16 +20,15 @@ const { title, description, ogdescription } = Astro.props;
   </head>
   
   <body>
-    <header>
-      <Header />
-    </header>
+		<header>
+			<Header>
+		</header>
 
     <main>
       <slot />
     </main>
 
     <footer>
-      <Footer />
     </footer>
   </body>
 </html>
